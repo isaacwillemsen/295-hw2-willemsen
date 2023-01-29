@@ -3,6 +3,7 @@ import subprocess
 
 print("Script being run: ", sys.argv[0])
 print("Argument passed: ", sys.argv[1])
+print("")
 
 cmd = ('git', 'cat-file', '-p', sys.argv[1])
 process = subprocess.run(cmd, capture_output=True, text=True)
