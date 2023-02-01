@@ -14,3 +14,5 @@ for commit in sys.argv[1:]:
         print(line)
         if line == sys.argv[1]:
             print("YAY")
+
+
