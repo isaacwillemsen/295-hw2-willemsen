@@ -26,9 +26,15 @@ for s in shas:
         sha1 = s[12:52]
         print("SHA-1 for", sys.argv[1], sha1)
         print("")
+        getContents = ('git', 'cat-file', '-p', sha1)
+        process3 = subprocess.run(getContents, capture_output=True, text=True)
+        output3 = process3.stdout
+        lines = output3.split("\n")
+        for line in lines:
+            print(line)
 
-with open(sys.argv[1]) as f:
-    lines = f.readlines()
+# with open(sys.argv[1]) as f:
+#     lines = f.readlines()
 
-for str in lines:
-    print(str)
+# for str in lines:
+#     print(str)
